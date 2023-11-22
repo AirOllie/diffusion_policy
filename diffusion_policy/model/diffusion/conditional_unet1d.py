@@ -85,7 +85,7 @@ class ConditionalUnet1D(nn.Module):
         diffusion_step_encoder = nn.Sequential(
             SinusoidalPosEmb(dsed),
             nn.Linear(dsed, dsed * 4),
-            nn.Mish(),
+            nn.Mish(),  # Mish(x) = x * tanh(softplus(x)) where softplus(x) = log(1 + exp(x))
             nn.Linear(dsed * 4, dsed),
         )
         cond_dim = dsed

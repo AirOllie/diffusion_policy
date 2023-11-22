@@ -1,0 +1,1 @@
+python eval.py --checkpoint data/block_pushing/epoch=0650-test_mean_score=0.899.ckpt --output_dir data/blockpush_eval_output/dt --device cuda:0

@@ -8,9 +8,9 @@ from diffusion_policy.common.sampler import SequenceSampler, get_val_mask
 from diffusion_policy.model.common.normalizer import LinearNormalizer, SingleFieldLinearNormalizer
 from diffusion_policy.dataset.base_dataset import BaseLowdimDataset
 
-class BlockPushLowdimDataset(BaseLowdimDataset):
-    def __init__(self, 
-            zarr_path, 
+class Maze2dLowdimDataset(BaseLowdimDataset):
+    def __init__(self,
+            zarr_path,
             horizon=1,
             pad_before=0,
             pad_after=0,
@@ -26,14 +26,14 @@ class BlockPushLowdimDataset(BaseLowdimDataset):
             zarr_path, keys=[obs_key, action_key])
 
         val_mask = get_val_mask(
-            n_episodes=self.replay_buffer.n_episodes, 
+            n_episodes=self.replay_buffer.n_episodes,
             val_ratio=val_ratio,
             seed=seed)
         train_mask = ~val_mask
         self.sampler = SequenceSampler(
-            replay_buffer=self.replay_buffer, 
+            replay_buffer=self.replay_buffer,
             sequence_length=horizon,
-            pad_before=pad_before, 
+            pad_before=pad_before,
             pad_after=pad_after,
             episode_mask=train_mask)
         self.obs_key = obs_key
@@ -48,9 +48,9 @@ class BlockPushLowdimDataset(BaseLowdimDataset):
     def get_validation_dataset(self):
         val_set = copy.copy(self)
         val_set.sampler = SequenceSampler(
-            replay_buffer=self.replay_buffer, 
+            replay_buffer=self.replay_buffer,
             sequence_length=self.horizon,
-            pad_before=self.pad_before, 
+            pad_before=self.pad_before,
             pad_after=self.pad_after,
             episode_mask=~self.train_mask
             )
@@ -63,7 +63,7 @@ class BlockPushLowdimDataset(BaseLowdimDataset):
         normalizer = LinearNormalizer()
         if not self.use_manual_normalizer:
             normalizer.fit(data=data, last_n_dims=1, mode=mode, **kwargs)
-        else:  # ????
+        else:
             x = data['obs']
             stat = {
                 'max': np.max(x, axis=0),
@@ -110,7 +110,7 @@ class BlockPushLowdimDataset(BaseLowdimDataset):
 
     def _sample_to_data(self, sample):
         obs = sample[self.obs_key] # T, D_o
-        if not self.obs_eef_target: # ?????
+        if not self.obs_eef_target:
             obs[:,8:10] = 0
         data = {
             'obs': obs,

@@ -103,7 +103,7 @@ class DiffusionUnetLowdimPolicy(BaseLowdimPolicy):
         """
 
         assert 'obs' in obs_dict
-        assert 'past_action' not in obs_dict # not implemented yet
+        assert 'past_action' not in obs_dict  # not implemented yet
         nobs = self.normalizer['obs'].normalize(obs_dict['obs'])
         B, _, Do = nobs.shape
         To = self.n_obs_steps
@@ -228,13 +228,13 @@ class DiffusionUnetLowdimPolicy(BaseLowdimPolicy):
             trajectory, noise, timesteps)
         
         # compute loss mask
-        loss_mask = ~condition_mask
+        loss_mask = ~condition_mask  # bitwise NOT
 
         # apply conditioning
         noisy_trajectory[condition_mask] = trajectory[condition_mask]
         
         # Predict the noise residual
-        pred = self.model(noisy_trajectory, timesteps, 
+        pred = self.model(noisy_trajectory, timesteps,
             local_cond=local_cond, global_cond=global_cond)
 
         pred_type = self.noise_scheduler.config.prediction_type 

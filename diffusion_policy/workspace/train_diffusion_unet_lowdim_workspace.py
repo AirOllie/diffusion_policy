@@ -200,6 +200,8 @@ class TrainDiffusionUnetLowdimWorkspace(BaseWorkspace):
                         if (cfg.training.max_train_steps is not None) \
                             and batch_idx >= (cfg.training.max_train_steps-1):
                             break
+
+                        # break  ############### for test only #################
                 
                 # at the end of each epoch
                 # replace train_loss with epoch average

@@ -23,22 +23,29 @@ from diffusion_policy.workspace.base_workspace import BaseWorkspace
 @click.option('-o', '--output_dir', required=True)
 @click.option('-d', '--device', default='cuda:0')
 def main(checkpoint, output_dir, device):
-    if os.path.exists(output_dir):
-        click.confirm(f"Output path {output_dir} already exists! Overwrite?", abort=True)
+    # if os.path.exists(output_dir):
+    #     click.confirm(f"Output path {output_dir} already exists! Overwrite?", abort=True)
     pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
     
     # load checkpoint
     payload = torch.load(open(checkpoint, 'rb'), pickle_module=dill)
     cfg = payload['cfg']
     cls = hydra.utils.get_class(cfg._target_)
-    workspace = cls(cfg, output_dir=output_dir)
+    # workspace = cls(cfg, output_dir=output_dir)
+    workspace = cls(cfg)
     workspace: BaseWorkspace
     workspace.load_payload(payload, exclude_keys=None, include_keys=None)
     
     # get policy from workspace
-    policy = workspace.model
-    if cfg.training.use_ema:
-        policy = workspace.ema_model
+    if hasattr(workspace, 'model'):
+        policy = workspace.model
+        if cfg.training.use_ema:
+            policy = workspace.ema_model
+    elif hasattr(workspace, 'policy'):
+        policy = workspace.policy
+    else:
+        pass
+
     
     device = torch.device(device)
     policy.to(device)

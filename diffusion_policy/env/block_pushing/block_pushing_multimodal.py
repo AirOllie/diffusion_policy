@@ -389,7 +389,7 @@ class BlockPushMultimodal(block_pushing.BlockPush):
             else:
                 if self._init_distance[i] != 100:
                     if np.abs(new_distance - self._init_distance[i]) > 1e-3:
-                        logger.info(f"Block {i} moved on step {self._step_num}")
+                        # logger.info(f"Block {i} moved on step {self._step_num}")
                         self._event_manager.reach(step=self._step_num, block_id=i)
                         self._init_distance[i] = 100
 
