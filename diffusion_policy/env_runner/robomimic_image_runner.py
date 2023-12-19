@@ -89,7 +89,8 @@ class RobomimicImageRunner(BaseImageRunner):
         def env_fn():
             robomimic_env = create_env(
                 env_meta=env_meta, 
-                shape_meta=shape_meta
+                shape_meta=shape_meta,
+                enable_render=False
             )
             # Robosuite's hard reset causes excessive memory consumption.
             # Disabled to run more envs.
@@ -215,8 +216,8 @@ class RobomimicImageRunner(BaseImageRunner):
             env_prefixs.append('test/')
             env_init_fn_dills.append(dill.dumps(init_fn))
 
-        env = AsyncVectorEnv(env_fns, dummy_env_fn=dummy_env_fn)
-        # env = SyncVectorEnv(env_fns)
+        # env = AsyncVectorEnv(env_fns, dummy_env_fn=dummy_env_fn)
+        env = SyncVectorEnv(env_fns)
 
 
         self.env_meta = env_meta

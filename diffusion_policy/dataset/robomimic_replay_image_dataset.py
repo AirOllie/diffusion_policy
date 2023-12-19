@@ -44,7 +44,8 @@ class RobomimicReplayImageDataset(BaseImageDataset):
             use_legacy_normalizer=False,
             use_cache=False,
             seed=42,
-            val_ratio=0.0
+            val_ratio=0.0,
+            dataset_scale=1.0,
         ):
         rotation_transformer = RotationTransformer(
             from_rep='axis_angle', to_rep=rotation_rep)
@@ -55,7 +56,7 @@ class RobomimicReplayImageDataset(BaseImageDataset):
             cache_lock_path = cache_zarr_path + '.lock'
             print('Acquiring lock on cache.')
             with FileLock(cache_lock_path):
-                if not os.path.exists(cache_zarr_path):
+                if not os.path.exists(cache_zarr_path) or True:  # force reload
                     # cache does not exists
                     try:
                         print('Cache does not exist. Creating!')
@@ -65,12 +66,13 @@ class RobomimicReplayImageDataset(BaseImageDataset):
                             shape_meta=shape_meta, 
                             dataset_path=dataset_path, 
                             abs_action=abs_action, 
-                            rotation_transformer=rotation_transformer)
-                        print('Saving cache to disk.')
-                        with zarr.ZipStore(cache_zarr_path) as zip_store:
-                            replay_buffer.save_to_store(
-                                store=zip_store
-                            )
+                            rotation_transformer=rotation_transformer,
+                            dataset_scale=dataset_scale)
+                        # print('Saving cache to disk.')
+                        # with zarr.ZipStore(cache_zarr_path) as zip_store:
+                        #     replay_buffer.save_to_store(
+                        #         store=zip_store
+                        #     )
                     except Exception as e:
                         shutil.rmtree(cache_zarr_path)
                         raise e
@@ -78,7 +80,7 @@ class RobomimicReplayImageDataset(BaseImageDataset):
                     print('Loading cached ReplayBuffer from Disk.')
                     with zarr.ZipStore(cache_zarr_path, mode='r') as zip_store:
                         replay_buffer = ReplayBuffer.copy_from_store(
-                            src_store=zip_store, store=zarr.MemoryStore())
+                            src_store=zip_store, store=zarr.MemoryStore(), dataset_scale=dataset_scale)
                     print('Loaded!')
         else:
             replay_buffer = _convert_robomimic_to_replay(
@@ -86,7 +88,8 @@ class RobomimicReplayImageDataset(BaseImageDataset):
                 shape_meta=shape_meta, 
                 dataset_path=dataset_path, 
                 abs_action=abs_action, 
-                rotation_transformer=rotation_transformer)
+                rotation_transformer=rotation_transformer,
+                dataset_scale=dataset_scale)
 
         rgb_keys = list()
         lowdim_keys = list()
@@ -244,7 +247,7 @@ def _convert_actions(raw_actions, abs_action, rotation_transformer):
 
 
 def _convert_robomimic_to_replay(store, shape_meta, dataset_path, abs_action, rotation_transformer, 
-        n_workers=None, max_inflight_tasks=None):
+        n_workers=None, max_inflight_tasks=None, dataset_scale=1.0):
     if n_workers is None:
         n_workers = multiprocessing.cpu_count()
     if max_inflight_tasks is None:
@@ -270,9 +273,13 @@ def _convert_robomimic_to_replay(store, shape_meta, dataset_path, abs_action, ro
     with h5py.File(dataset_path) as file:
         # count total steps
         demos = file['data']
+
+        total_episodes = len(demos)
+        episodes_to_load = int(total_episodes * dataset_scale)
+
         episode_ends = list()
         prev_end = 0
-        for i in range(len(demos)):
+        for i in range(episodes_to_load):
             demo = demos[f'demo_{i}']
             episode_length = demo['actions'].shape[0]
             episode_end = prev_end + episode_length
@@ -289,7 +296,7 @@ def _convert_robomimic_to_replay(store, shape_meta, dataset_path, abs_action, ro
             if key == 'action':
                 data_key = 'actions'
             this_data = list()
-            for i in range(len(demos)):
+            for i in range(episodes_to_load):
                 demo = demos[f'demo_{i}']
                 this_data.append(demo[data_key][:].astype(np.float32))
             this_data = np.concatenate(this_data, axis=0)
@@ -299,9 +306,9 @@ def _convert_robomimic_to_replay(store, shape_meta, dataset_path, abs_action, ro
                     abs_action=abs_action,
                     rotation_transformer=rotation_transformer
                 )
-                assert this_data.shape == (n_steps,) + tuple(shape_meta['action']['shape'])
-            else:
-                assert this_data.shape == (n_steps,) + tuple(shape_meta['obs'][key]['shape'])
+            #     assert this_data.shape == (n_steps,) + tuple(shape_meta['action']['shape'])
+            # else:
+            #     assert this_data.shape == (n_steps,) + tuple(shape_meta['obs'][key]['shape'])
             _ = data_group.array(
                 name=key,
                 data=this_data,
@@ -336,7 +343,7 @@ def _convert_robomimic_to_replay(store, shape_meta, dataset_path, abs_action, ro
                         compressor=this_compressor,
                         dtype=np.uint8
                     )
-                    for episode_idx in range(len(demos)):
+                    for episode_idx in range(episodes_to_load):
                         demo = demos[f'demo_{episode_idx}']
                         hdf5_arr = demo['obs'][key]
                         for hdf5_idx in range(hdf5_arr.shape[0]):

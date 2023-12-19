@@ -106,11 +106,12 @@ class TrainDiffusionUnetLowdimWorkspace(BaseWorkspace):
                 model=self.ema_model)
 
         # configure env runner
-        env_runner: BaseLowdimRunner
-        env_runner = hydra.utils.instantiate(
-            cfg.task.env_runner,
-            output_dir=self.output_dir)
-        assert isinstance(env_runner, BaseLowdimRunner)
+        if cfg.task.env_runner.fps:
+            env_runner: BaseLowdimRunner
+            env_runner = hydra.utils.instantiate(
+                cfg.task.env_runner,
+                output_dir=self.output_dir)
+            assert isinstance(env_runner, BaseLowdimRunner)
 
         # configure logging
         wandb_run = wandb.init(
@@ -161,6 +162,11 @@ class TrainDiffusionUnetLowdimWorkspace(BaseWorkspace):
                     for batch_idx, batch in enumerate(tepoch):
                         # device transfer
                         batch = dict_apply(batch, lambda x: x.to(device, non_blocking=True))
+                        # noise_cov = [0.002] * 3 + [0.02] * 4 + [0]
+                        # noise_obs = torch.randn_like(batch['obs']) * torch.tensor(noise_cov).to(device)
+                        # batch['obs'] = batch['obs'] + noise_obs
+                        # noise_action = torch.randn_like(batch['action']) * torch.tensor(noise_cov).to(device)
+                        # batch['action'] = batch['action'] + noise_action
                         if train_sampling_batch is None:
                             train_sampling_batch = batch
 
@@ -215,7 +221,7 @@ class TrainDiffusionUnetLowdimWorkspace(BaseWorkspace):
                 policy.eval()
 
                 # run rollout
-                if (self.epoch % cfg.training.rollout_every) == 0:
+                if (self.epoch % cfg.training.rollout_every) == 0 and cfg.task.env_runner.fps:
                     runner_log = env_runner.run(policy)
                     # log all
                     step_log.update(runner_log)
@@ -282,8 +288,10 @@ class TrainDiffusionUnetLowdimWorkspace(BaseWorkspace):
                     # We can't copy the last checkpoint here
                     # since save_checkpoint uses threads.
                     # therefore at this point the file might have been empty!
-                    topk_ckpt_path = topk_manager.get_ckpt_path(metric_dict)
-
+                    if cfg.task.env_runner.fps:
+                        topk_ckpt_path = topk_manager.get_ckpt_path(metric_dict)
+                    else:
+                        topk_ckpt_path = os.path.join(topk_manager.save_dir, 'epoch={}loss={}.pt'.format(metric_dict['epoch'], metric_dict['val_loss']))
                     if topk_ckpt_path is not None:
                         self.save_checkpoint(path=topk_ckpt_path)
                 # ========= eval end for this epoch ==========

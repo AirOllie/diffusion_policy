@@ -245,8 +245,25 @@ class DiffusionUnetLowdimPolicy(BaseLowdimPolicy):
         else:
             raise ValueError(f"Unsupported prediction type {pred_type}")
 
-        loss = F.mse_loss(pred, target, reduction='none')
-        loss = loss * loss_mask.type(loss.dtype)
+        # loss = F.mse_loss(pred, target, reduction='none')
+        loss = F.mse_loss(pred[:,:,:3], target[:,:,:3], reduction='none')
+        # loss = loss * loss_mask.type(loss.dtype)
         loss = reduce(loss, 'b ... -> b (...)', 'mean')
         loss = loss.mean()
+
+        # for tycho only
+        # quaternion loss - inductive bias 1
+        p = pred[:,:,3:7]
+        q = target[:,:,3:7]
+        cos_sim = torch.nn.CosineSimilarity(dim=-1, eps=1e-6)
+        prod = torch.clamp(cos_sim(p, q), min=-0.99999, max=0.99999)
+        rotation_loss = torch.abs(torch.acos(prod)).to(device=loss.device)
+        rotation_loss = reduce(rotation_loss, 'b ... -> b (...)', 'mean')
+        rotation_loss = rotation_loss.mean()
+        # consistency loss - inductive bias 2
+        p_std = torch.std(pred, dim=1)
+        consistency_loss = reduce(p_std, 'b ... -> b (...)', 'mean')
+        consistency_loss = consistency_loss.mean()
+        loss = 1.9 * loss + 0.01 * rotation_loss
+
         return loss

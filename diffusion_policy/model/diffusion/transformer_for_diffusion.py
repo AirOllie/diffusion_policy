@@ -309,6 +309,7 @@ class TransformerForDiffusion(ModuleAttrMixin):
             # encoder
             cond_embeddings = time_emb
             if self.obs_as_cond:
+                # print(self.cond_obs_emb)
                 cond_obs_emb = self.cond_obs_emb(cond)
                 # (B,To,n_emb)
                 cond_embeddings = torch.cat([cond_embeddings, cond_obs_emb], dim=1)

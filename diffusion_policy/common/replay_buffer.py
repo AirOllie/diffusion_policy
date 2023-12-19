@@ -147,7 +147,7 @@ class ReplayBuffer:
     def copy_from_store(cls, src_store, store=None, keys=None, 
             chunks: Dict[str,tuple]=dict(), 
             compressors: Union[dict, str, numcodecs.abc.Codec]=dict(), 
-            if_exists='replace',
+            if_exists='replace', dataset_scale=1.0,
             **kwargs):
         """
         Load to memory.
@@ -165,6 +165,7 @@ class ReplayBuffer:
 
             if keys is None:
                 keys = src_root['data'].keys()
+
             data = dict()
             for key in keys:
                 arr = src_root['data'][key]
@@ -182,6 +183,7 @@ class ReplayBuffer:
             data_group = root.create_group('data', overwrite=True)
             if keys is None:
                 keys = src_root['data'].keys()
+
             for key in keys:
                 value = src_root['data'][key]
                 cks = cls._resolve_array_chunks(

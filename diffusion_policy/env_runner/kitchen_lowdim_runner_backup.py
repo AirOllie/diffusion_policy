@@ -53,10 +53,9 @@ class KitchenLowdimRunner(BaseLowdimRunner):
         steps_per_render = int(max(task_fps // fps, 1))
 
         def env_fn():
-            import gym
-            import d4rl
+            from diffusion_policy.env.kitchen.v0 import KitchenAllV0
             from diffusion_policy.env.kitchen.kitchen_lowdim_wrapper import KitchenLowdimWrapper
-            env = gym.make('kitchen-complete-v0')
+            env = KitchenAllV0(use_abs_action=abs_action)
             env.robot_noise_ratio = robot_noise_ratio
             return MultiStepWrapper(
                 VideoRecordingWrapper(
@@ -177,8 +176,8 @@ class KitchenLowdimRunner(BaseLowdimRunner):
             )
             return env
         
-        # env = AsyncVectorEnv(env_fns, dummy_env_fn=dummy_env_fn)
-        env = SyncVectorEnv(env_fns)
+        env = AsyncVectorEnv(env_fns, dummy_env_fn=dummy_env_fn)
+        # env = SyncVectorEnv(env_fns)
 
         self.env = env
         self.env_fns = env_fns

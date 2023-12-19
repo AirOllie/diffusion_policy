@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c41b0012-c6fb-4f88-bc09-1ee58579f4c8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/can_mh_cnn_45.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/can_ph_cnn.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/halfcheetah_bt.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/halfcheetah_cnn.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/halfcheetah_cnn_45.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/halfcheetah_cnn_45_chunk100.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/halfcheetah_cnn_45_chunk300.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/halfcheetah_transformer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/kitchen_cnn.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/maze2d_transformer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/square_ph_cnn_45_100.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/toolhang_ph_cnn_45_100.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/tycho_reaching_cnn.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/walker2d_transformer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/halfcheetah_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/kitchen_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/tycho_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/walker2d_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/conda_environment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/conda_environment_macos.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/conda_environment_real.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/blockpush.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/blockpush_transformer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/halfcheetah_bt.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/halfcheetah_cnn.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/halfcheetah_transformer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/image_pusht_diffusion_policy_cnn.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/kitchen_cnn.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/maze2d.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/maze2d_transformer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/pen-human.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/tycho_reaching_cnn.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/config/walker2d_transformer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/adroit_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/halfcheetah_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/halfcheetah_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/kitchen_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/maze2d_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/pointmaze_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/tycho_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/tycho_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/walker2d_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/dataset/walker2d_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/demo_pusht.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/demo_real_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/codecs/imagecodecs_numcodecs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/checkpoint_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/cv2_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/env_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/json_logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/nested_dict_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/normalize_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/pose_trajectory_interpolator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/precise_sleep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/pymunk_override.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/pymunk_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/pytorch_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/replay_buffer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/robomimic_config_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/robomimic_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/sampler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/common/timestamp_accumulator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/blockpush_lowdim_seed.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/blockpush_lowdim_seed_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/can_image.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/can_image_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/can_lowdim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/can_lowdim_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/kitchen_lowdim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/kitchen_lowdim_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/lift_image.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/lift_image_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/lift_lowdim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/lift_lowdim_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/maze2d_lowdim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/pusht_image.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/pusht_lowdim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/real_pusht_image.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/square_image.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/square_image_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/square_lowdim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/square_lowdim_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/tool_hang_image.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/tool_hang_image_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/tool_hang_lowdim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/tool_hang_lowdim_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/transport_image.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/transport_image_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/transport_lowdim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/task/transport_lowdim_abs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_bet_lowdim_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_transformer_hybrid_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_transformer_lowdim_kitchen_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_transformer_lowdim_pusht_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_transformer_lowdim_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_transformer_real_hybrid_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_ddim_hybrid_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_ddim_lowdim_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_hybrid_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_image_pretrained_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_image_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_lowdim_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_real_hybrid_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_real_image_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_real_pretrained_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_diffusion_unet_video_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_ibc_dfo_hybrid_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_ibc_dfo_lowdim_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_ibc_dfo_real_hybrid_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_robomimic_image_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_robomimic_lowdim_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/config/train_robomimic_real_image_workspace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/base_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/blockpush_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/halfcheetah_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/kitchen_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/kitchen_mjl_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/maze2d_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/pen_human_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/pusht_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/pusht_image_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/real_pusht_image_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/robomimic_replay_image_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/robomimic_replay_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/tycho_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/dataset/walker2d_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/block.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/block2.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/blocks/blue_cube.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/blocks/cube.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/blocks/green_star.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/blocks/moon.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/blocks/pentagon.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/blocks/red_moon.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/blocks/star.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/blocks/yellow_pentagon.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/insert.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/plane.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/base.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/cylinder.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/cylinder_real.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/head.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/mid.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/suction-base.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/suction-head-long.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/suction-head.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/suction/tip.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/workspace.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/workspace_real.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/zone.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/zone.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/assets/zone2.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/block_pushing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/block_pushing_discontinuous.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/block_pushing_multimodal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/oracles/discontinuous_push_oracle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/oracles/multimodal_push_oracle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/oracles/oriented_push_oracle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/oracles/pushing_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/oracles/reach_oracle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/utils/pose3d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/utils/utils_pybullet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/block_pushing/utils/xarm_sim_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/kitchen_lowdim_wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/kitchen_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/.pylintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/.style.yapf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/base_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/franka/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/franka/assets/franka_kitchen_jntpos_act_ab.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/franka/kitchen_multitask_v0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/franka/robot/franka_config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/franka/robot/franka_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/mujoco_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/robot_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/simulation/module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/simulation/renderer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/simulation/sim_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/utils/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/utils/configurable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/utils/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/utils/parse_demos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_envs/adept_envs/utils/quatmath.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/CONTRIBUTING.public.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/README.public.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/backwall_asset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/backwall_chain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/counters_asset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/counters_chain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/hingecabinet_asset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/hingecabinet_chain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/kettle_asset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/kettle_chain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/microwave_asset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/microwave_chain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/oven_asset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/oven_chain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/slidecabinet_asset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/assets/slidecabinet_chain.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/counters.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/hingecabinet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/kettle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/kitchen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/burnerplate.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/burnerplate_mesh.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/cabinetbase.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/cabinetdrawer.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/cabinethandle.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/countertop.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/faucet.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/handle2.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/hingecabinet.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/hingedoor.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/hingehandle.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/hood.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/kettle.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/kettlehandle.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/knob.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/lightswitch.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/lightswitchbase.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/micro.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/microbutton.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/microdoor.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/microefeet.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/microfeet.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/microhandle.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/microwindow.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/oven.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/ovenhandle.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/oventop.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/ovenwindow.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/slidecabinet.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/slidedoor.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/stoverim.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/tile.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/meshes/wall.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/microwave.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/oven.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/slidecabinet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/textures/marble1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/textures/metal1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/textures/tile1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/kitchen/textures/wood1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/scenes/basic_scene.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/scenes/textures/white_marble_tile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/adept_models/scenes/textures/white_marble_tile2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/assets/actuator0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/assets/actuator1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/assets/assets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/assets/basic_scene.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/assets/chain0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/assets/chain0_overlay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/assets/chain1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/assets/teleop_actuator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/bi-franka_panda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/franka_panda.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/franka_panda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/franka_panda_teleop.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/finger.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/hand.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/link0.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/link1.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/link2.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/link3.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/link4.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/link5.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/link6.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/collision/link7.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/finger.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/hand.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/link0.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/link1.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/link2.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/link3.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/link4.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/link5.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/link6.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/relay_policy_learning/third_party/franka/meshes/visual/link7.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/kitchen/v0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/pusht/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/pusht/pusht_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/pusht/pusht_image_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/pusht/pusht_keypoints_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/pusht/pymunk_keypoint_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/pusht/pymunk_override.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/robomimic/robomimic_image_wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env/robomimic/robomimic_lowdim_wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/base_image_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/base_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/blockpush_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/halfcheetah_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/kitchen_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/kitchen_lowdim_runner_backup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/maze2d_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/pen_human_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/pusht_image_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/pusht_keypoints_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/real_pusht_image_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/robomimic_image_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/robomimic_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/env_runner/walker2d_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/gym_util/async_vector_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/gym_util/multistep_wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/gym_util/sync_vector_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/gym_util/video_recording_wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/gym_util/video_wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/action_ae/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/action_ae/discretizers/k_means.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/latent_generators/latent_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/latent_generators/mingpt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/latent_generators/transformer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/libraries/loss_fn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/libraries/mingpt/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/libraries/mingpt/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/libraries/mingpt/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/libraries/mingpt/trainer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/libraries/mingpt/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/bet/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/common/dict_of_tensor_mixin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/common/lr_scheduler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/common/module_attr_mixin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/common/normalizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/common/rotation_transformer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/common/shape_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/common/tensor_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/diffusion/conditional_unet1d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/diffusion/conv1d_components.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/diffusion/ema_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/diffusion/mask_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/diffusion/positional_embedding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/diffusion/transformer_for_diffusion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/vision/crop_randomizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/vision/model_getter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/model/vision/multi_image_obs_encoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/base_image_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/base_lowdim_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/bet_lowdim_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/diffusion_transformer_hybrid_image_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/diffusion_transformer_lowdim_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/diffusion_unet_hybrid_image_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/diffusion_unet_image_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/diffusion_unet_lowdim_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/diffusion_unet_video_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/ibc_dfo_hybrid_image_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/ibc_dfo_lowdim_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/robomimic_image_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/policy/robomimic_lowdim_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/keystroke_counter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/multi_camera_visualizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/multi_realsense.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/real_data_conversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/real_env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/real_inference_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/realsense_config/415_high_accuracy_mode.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/realsense_config/435_high_accuracy_mode.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/rtde_interpolation_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/single_realsense.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/spacemouse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/spacemouse_shared_memory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/real_world/video_recorder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/bet_blockpush_conversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/blockpush_abs_conversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/episode_lengths.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/generate_bet_blockpush.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/real_dataset_conversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/real_pusht_metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/real_pusht_successrate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/robomimic_dataset_action_comparison.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/scripts/robomimic_dataset_conversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/shared_memory/shared_memory_queue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/shared_memory/shared_memory_ring_buffer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/shared_memory/shared_memory_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/shared_memory/shared_ndarray.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/base_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_bet_lowdim_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_diffusion_transformer_hybrid_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_diffusion_transformer_lowdim_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_diffusion_unet_hybrid_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_diffusion_unet_image_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_diffusion_unet_video_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_ibc_dfo_hybrid_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_ibc_dfo_lowdim_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_robomimic_image_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy/workspace/train_robomimic_lowdim_workspace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy_state_halfcheetah_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy_state_pusht_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/diffusion_policy_state_tycho_reaching_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/env_runner/halfcheetah_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/env_runner/kitchen_lowdim_runner_backup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/env_runner/pen_human_lowdim_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/env_runner/walker2d_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/eval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/eval_real_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/media/multimodal_sim.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/media/teaser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/multirun_metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/pyrightconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/ray_exec.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/ray_train_multirun.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_block_pushing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_cv2_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_multi_realsense.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_pose_trajectory_interpolator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_precise_sleep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_replay_buffer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_ring_buffer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_robomimic_image_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_robomimic_lowdim_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_shared_queue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_single_realsense.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/tests/test_timestamp_accumulator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy_state_halfcheetah_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy_state_pusht_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diffusion_policy_state_tycho_reaching_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/eval_blockpush.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/train_blockpush.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/train_maze2d.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/train_pusht.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adroit_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/adroit_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockpush.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/blockpush.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diffusion_policy/common/replay_buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/common/replay_buffer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diffusion_policy/dataset/blockpush_lowdim_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/dataset/blockpush_lowdim_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diffusion_policy/dataset/robomimic_replay_image_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/dataset/robomimic_replay_image_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diffusion_policy/env_runner/kitchen_lowdim_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/env_runner/kitchen_lowdim_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diffusion_policy/model/diffusion/transformer_for_diffusion.py" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/model/diffusion/transformer_for_diffusion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diffusion_policy/workspace/train_diffusion_transformer_lowdim_workspace.py" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/workspace/train_diffusion_transformer_lowdim_workspace.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/workspace/train_diffusion_unet_lowdim_workspace.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval_blockpush.sh" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/run/eval_blockpush.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_pusht_diffusion_policy_cnn.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/image_pusht_diffusion_policy_cnn.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze2d.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/maze2d.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze2d_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/maze2d_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pen-human.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/pen-human.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pointmaze_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/pointmaze_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_blockpush.sh" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/run/train_blockpush.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_maze2d.sh" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/run/train_maze2d.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_pusht.sh" beforeDir="false" afterPath="$PROJECT_DIR$/diffusion_policy/run/train_pusht.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2YVcRQjo8CuwdJhl3WqH5oF7eku" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ollie/Desktop/Oliver/diffusion_policy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c41b0012-c6fb-4f88-bc09-1ee58579f4c8" name="Changes" comment="" />
+      <created>1700614178336</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700614178336</updated>
+      <workItem from="1700614179489" duration="51000" />
+      <workItem from="1701722431124" duration="1866000" />
+      <workItem from="1701991098256" duration="1874000" />
+      <workItem from="1701996267379" duration="95000" />
+      <workItem from="1702599468300" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
